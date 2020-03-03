@@ -9,7 +9,7 @@ class PasswordValidator {
         "[\\W]"
     ).map { it.toRegex() }
 
-    fun validate(password: String) = validations.all { validation ->
+    fun isValid(password: String) = validations.all { validation ->
         password.contains(validation)
     }
 }

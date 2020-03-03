@@ -9,28 +9,28 @@ class PasswordValidatorTest {
 
     @Test
     fun givenPasswordLengthIsShorterThan8_whenValidate_shouldReturnFalse() {
-        val result = passwordValidator.validate("aB!4123")
+        val result = passwordValidator.isValid("aB!4123")
 
         assertFalse(result)
     }
 
     @Test
     fun givenPasswordDoesntHaveUppercaseLetter_whenValidate_shouldReturnFalse() {
-        val result = passwordValidator.validate("abcd12@#")
+        val result = passwordValidator.isValid("abcd12@#")
 
         assertFalse(result)
     }
 
     @Test
     fun givenPasswordDoesntHaveLowercaseLetter_whenValidate_shouldReturnFalse() {
-        val result = passwordValidator.validate("ABCD12@#")
+        val result = passwordValidator.isValid("ABCD12@#")
 
         assertFalse(result)
     }
 
     @Test
     fun givenPasswordDoesntHaveSpecialCharacter_whenValidate_shouldReturnFalse() {
-        val result = passwordValidator.validate("ABCD12a4")
+        val result = passwordValidator.isValid("ABCD12a4")
 
         assertFalse(result)
     }
@@ -38,14 +38,14 @@ class PasswordValidatorTest {
 
     @Test
     fun givenPasswordDoesntHaveANumber_whenValidate_shouldReturnFalse() {
-        val result = passwordValidator.validate("ABCD!as@")
+        val result = passwordValidator.isValid("ABCD!as@")
 
         assertFalse(result)
     }
 
     @Test
     fun givenPasswordIsValid_whenValidate_shouldReturnTrue() {
-        val result = passwordValidator.validate("ABCD2!as@")
+        val result = passwordValidator.isValid("ABCD2!as@")
 
         assertTrue(result)
     }
