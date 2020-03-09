@@ -35,10 +35,16 @@ class PasswordValidatorTest {
         assertFalse(result)
     }
 
-
     @Test
     fun givenPasswordDoesntHaveANumber_whenValidate_shouldReturnFalse() {
         val result = passwordValidator.isValid("ABCD!as@")
+
+        assertFalse(result)
+    }
+
+    @Test
+    fun givenEmptyPassword_whenValidate_shouldReturnFalse() {
+        val result = passwordValidator.isValid("")
 
         assertFalse(result)
     }

@@ -6,4 +6,5 @@
     <string name="empty_email_error">O campo de email está vazio</string>
     <string name="empty_password_error">O campo senha está vazio</string>
     <string name="invalid_password_error">Senha inválida</string>
+    <string name="generic_error">Login inválido</string>
 </resources>

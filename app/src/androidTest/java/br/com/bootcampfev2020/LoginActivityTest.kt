@@ -28,7 +28,7 @@ class LoginActivityTest {
         }
 
         loginAssert {
-            checkErrorIsShown(R.string.empty_email_error)
+            checkErrorIsShown(R.string.generic_error)
         }
     }
 
@@ -40,7 +40,7 @@ class LoginActivityTest {
         }
 
         loginAssert {
-            checkErrorIsShown(R.string.empty_password_error)
+            checkErrorIsShown(R.string.generic_error)
         }
     }
 
@@ -53,7 +53,7 @@ class LoginActivityTest {
         }
 
         loginAssert {
-            checkErrorIsShown(R.string.invalid_password_error)
+            checkErrorIsShown(R.string.generic_error)
         }
     }
 
